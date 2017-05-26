@@ -21,9 +21,9 @@
 % {/tikz/mark size=\perpointmarksize pt}]  table [x=a,y=b,col sep=comma] {punkte.csv};
 % \end{axis}
 \begin{axis}[yticklabels={,,},xticklabels={,,},hide axis,axis equal,width=120cm,enlargelimits=false]
-\addplot+[colormap={bw}{rgb255(1cm)=(0,18,222);  rgb255(9cm)=(0,18,222)}, only marks,scatter, visualization depends on={.05+.00025*(x^2+y^2)^(.5) \as \perpointmarksize}, scatter/@pre marker code/.append style=
+\addplot+[colormap={bw}{rgb255(1cm)=(0,18,222);  rgb255(9cm)=(0,18,222)}, only marks,scatter, scatter/use mapped color={draw opacity=0,fill=mapped color}, visualization depends on={.05+.00025*(x^2+y^2)^(.5) \as \perpointmarksize}, scatter/@pre marker code/.append style=
 {/tikz/mark size=\perpointmarksize pt}]  table [x=a,  y=b,col sep=comma] {punkte.csv};
-\addplot+[colormap={bw}{rgb255(1cm)=(185,207,0); rgb255(9cm)=(187,207,0)},only marks,scatter, visualization depends on={.05+.00025*(x^2+y^2)^(.5) \as \perpointmarksize}, scatter/@pre marker code/.append style=
+\addplot+[colormap={bw}{rgb255(1cm)=(185,207,0); rgb255(9cm)=(187,207,0)},only marks,mark=*, scatter, scatter/use mapped color={draw opacity=0,fill=mapped color}, visualization depends on={.05+.00025*(x^2+y^2)^(.5) \as \perpointmarksize}, scatter/@pre marker code/.append style=
 {/tikz/mark size=\perpointmarksize pt}]  table [x=a,y=b,col sep=comma] {pripunkte.csv};
 \end{axis}
 \end{tikzpicture}
